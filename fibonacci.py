@@ -1,8 +1,7 @@
 class Solution:
-
-    def fib(self):
-        res = [1, 2]
-        for i in range(15):
+    def fib(self, first: int, second: int, n: int):
+        res = [first, second]
+        for i in range(n):
             temp = res[-1] + res[-2]
             res.append(temp)
             with open('output.txt', 'w') as f:
@@ -10,5 +9,5 @@ class Solution:
 
 
 sol = Solution()
-sol.fib()
+sol.fib(1, 2, 20)
 
